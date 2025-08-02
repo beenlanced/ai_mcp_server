@@ -1,8 +1,5 @@
-# Creates a simple MCP server to show how to use the MCP server
-# and client in Python.
-# It is a minimal MCP server that provides a single tool to add two integers.
+# Creates a simple MCP server to show how to use an MCP server
 
-import os
 from pathlib import Path
 
 from fastmcp import FastMCP
@@ -133,9 +130,10 @@ def calculator_prompt(a: float, b: float, operation: str) -> str:
             return str(e)
     else:
         return "Invalid operation. Please choose add, subtract, multiply, or divide."
+    
 
 
 if __name__ == "__main__":
     # Start the MCP server
-    # Run the server using standard input/output transport for communication
-    mcp.run(transport="stdio") 
+    #transport = 'stdio' is suitable for local MCP.
+    mcp.run()
