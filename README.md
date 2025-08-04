@@ -8,11 +8,11 @@
 
 ## Project Description
 
-This project focuses on the construction of custom Model Context Protocol (MCP) servers built using Python code. The project was inspired by Dave Ebbelaar's [MCP Crash Course for Python Developers](https://www.youtube.com/watch?v=5xqFjh56AwM). The project breaks away from the use of Personal MCP servers that rely on Claude Desktop, Cursor, or other personal AI assistants. Instead, the project shows how to build MCP into Python Applications and agent systems. My project is similar to the The MCP Crash Course for Python Developers' outputs, but differs in the use of the constructions of the MCP tools in some cases and especially in the use of Gemini AI for models versus OpenAI which is used in the _Course_. The implementations of Gemini AI models require differences in MCP protocol implementation, but for the most part the overall flow of events follow the same general methodologies as outlined by the MCP standard.
+This project focuses on the construction of custom Model Context Protocol (MCP) servers built using Python code. The project was inspired by Dave Ebbelaar's [MCP Crash Course for Python Developers](https://www.youtube.com/watch?v=5xqFjh56AwM). The project breaks away from the use of Personal MCP servers that rely on Claude Desktop, Cursor, or other personal AI assistants. Instead, the project shows how to build MCP into Python Applications and agent systems. My project produces similar outputs to the the _MCP Crash Course for Python Developers_ course, but differs in the construction of the MCP tools and especially in the use of Gemini AI for models versus OpenAI which is used in the _Course_. The implementations of Gemini AI models require differences in MCP protocol implementation, but for the most part the overall flow of events follow the same general methodologies as outlined by the MCP standard.
 
-This project is important because it helps to understand how to build production systems that might use MCP in Python based applications.
+This project is important because it provides an understanding of how to build production systems that could use MCP in Python based applications.
 
-Also, it was good way to learning more about this vastly popular standardization protocol.
+Also, the project was simply a good way to learning more about this vastly popular standardization protocol.
 
 #### The Project's Key Components:
 
@@ -20,10 +20,10 @@ Also, it was good way to learning more about this vastly popular standardization
 
 - Building custom MCP servers using the Python Software Developer Kit (SDK)
 
-  - I show some simple examples of MCP servers in using STDIO and STREAMABLE-HTTP Transports
-  - How to build Client testing code for these Servers
-  - How MCP differs from simple Python function calling
-  - How you might build Docker containers run MCP servers locally and remotely, as one might do in a production environment.
+  - I show some simple examples of MCP servers using `STDIO` and `STREAMABLE-HTTP` transports
+  - I show how to build client testing code for these servers
+  - I show how MCP differs from simple Python function calling
+  - I show how you might build Docker containers to run MCP servers locally and remotely, as one might do in a production environment.
 
 - Integrating these servers into Python applications
 
@@ -35,14 +35,14 @@ The project contains the key elements:
 
 - `Docker` to containerize an MCP server remote usage,
 - `FastMCP` the Python framework that simplifies the creation of servers and clients using the Model Context Protocol (MCP), which standardizes how AI applications connect to data and tools,
-- `Gemini AI`, Google's advanced AI model (e.g., LLM) that I use to generate various types of content, including text in conjunction with the MCP server and it's MCP tools, prompts, and resources.
+- `Gemini AI`, Google's advanced AI model (e.g., LLM) that I use to generate various types of content, including text in conjunction with the MCP server and its MCP tools, prompts, and resources.
 - `gemini-2.5-flash` the generative AI model that I used,
 - `Git` (version control),
 - `MCP` the protocol standardizing how AI applications connect to data and tools,
 - `Node.js` JavaScript runtime environment to help run MCP inspector,
 - `NPM` Node Package Manager the default packet manager for Node.js,
 - `Prompt Engineering` to provide instructions for the LLM on how to retrieve information,
-- `Python` the standard modules,
+- `Python` the standard modules, and
 - `uv` package management including use of `ruff` for linting and formatting.
 
 ---
