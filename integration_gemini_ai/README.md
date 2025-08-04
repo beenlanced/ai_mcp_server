@@ -10,11 +10,11 @@ The following files will show how to:
 
 2. Connect Gemini AI to this MCP server
 
-3. Allow Gemini AI to dynamically use the tolls when responding to user queries.
+3. Allow Gemini AI to dynamically use the tools when responding to user queries
 
 ## Connection Methods
 
-Going to use the stdio transport for communication between the client and server, which basically means:
+I use the `STDIO` transport for communication between the client and server, which basically means:
 
 - The client and server will run in the same process
 
@@ -22,11 +22,11 @@ Going to use the stdio transport for communication between the client and server
 
 - No separate server process is needed.
 
-Alternatively, I could split the client and server into separate applications (e.g., running the server on a different machine) by using `streamable-http transport` (recall Server-Sent Events (SSE) have been deprecated).
+Alternatively, I could split the client and server into separate applications (e.g., running the server on a different machine) by using `streamable-http transport` (Server-Sent Events (SSE) has been deprecated).
 
 ## Description of the Data Flow
 
-1.**UserQuery**: The user sends a query to the system like "How to turn on a IPOD shuffle" 2.**Gemini AI API**: The Gemini AI API receives the query and available tools from the MCP server 3.**Tool Selection**: Gemini AI, acting as the reasoning component, decides which tools to use based on the query 4.**MCP Client**: The client receives Gemini AI's tool call request and forwards it to the MCP server (i.e., the appropriate tool) 5.**MCP Server**: The server executes the requeste tool (e.g., retrieving info from a database) 6.**Response Flow**: The tool result flows back through the MCP client to Gemini AI 7.**Final Response**: Gemini AI generates a final response incorporating the tool data
+1.**UserQuery**: The user sends a query to the system like "How to turn on a IPOD shuffle" 2.**Gemini AI API**: The Gemini AI API receives the query and available tools from the MCP server 3.**Tool Selection**: Gemini AI, acting as the reasoning component, decides which tools to use based on the query 4.**MCP Client**: The client receives Gemini AI's tool call request and forwards it to the MCP server (i.e., the appropriate tool) 5.**MCP Server**: The server executes the request tool (e.g., retrieving info from a database) 6.**Response Flow**: The tool result flows back through the MCP client to the Gemini AI model 7.**Final Response**: Gemini AI generates a final response incorporating the tool data.
 
 ## How Gemini AI Executes the Tools
 
@@ -68,7 +68,8 @@ Contains Q&A pairs about company policies that can be queried through the MCP se
 ## Running the Example
 
 1. Ensure you have the required dependencies installed
-2. Set up your Gemini AI API key in the `.env` file
-3. Run the client: `python client.py`
+2. Set up your Gemini AI API key in an `.env` file
+3. Run the client: `python client.py` from a terminal window
+   - alternately, `uv run client.py` also should work.
 
-Note: With the stdio transport used in this example, you don't need to run the server separately as the client will automatically start it.
+Note: With the `STDIO` transport used in this example, you don't need to run the server separately as the client will automatically start it.

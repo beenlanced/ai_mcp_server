@@ -2,7 +2,7 @@
 
 ### Side-by-Side Comparison
 
-Let's compare our MCP implementation to a traditional function-calling approach in `function_calling.py`
+Here, I compare our MCP implementation to a traditional function-calling approach in `function_calling.py`
 
 Notice, I used the OpenAI library, but created the AI client using my `Gemini_API_KEY` as pointed out in the [Gemini-API Docs](https://ai.google.dev/gemini-api/docs/openai)
 
@@ -13,7 +13,7 @@ gemini_client = OpenAI(
 )
 ```
 
-At this small scale, the traditional approach is simpler. The key differences become apparent when:
+At this small scale, the traditional `function calling` approach is simpler. The key differences become apparent when:
 
 1. **Scale increases**: With dozens of tools, the MCP approach provides better organization
 2. **Reuse matters**: The MCP server can be used by multiple clients and applications
