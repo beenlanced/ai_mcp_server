@@ -1,6 +1,6 @@
 # MCP Server with Docker
 
-This project demonstrates how to run an MCP (Model Control Protocol) server using Docker. The server provides a simple calculator tool that can be accessed by a client. We are running the MCP server in a Docker container.
+This project demonstrates how to run an MCP server using Docker. The server provides a simple calculator tool that can be accessed by a client. We are running the MCP server in a Docker container.
 
 ## Prerequisites
 
@@ -28,7 +28,7 @@ docker build -t mcp-server .
 docker run -p 8050:8050 mcp-server
 ```
 
-This will start the MCP server inside a Docker container and expose it on port 8050.
+This command will start the MCP server inside a Docker container and expose it on port 8050.
 
 ## Running the Client
 
@@ -44,7 +44,7 @@ Or
 uv run client.py
 ```
 
-The client will connect to the server, list available tools, and call the calculator tool to add 2 and 3.
+The client will connect to the server, list available tools, and call the calculator tool to add the numbers 2 and 3.
 
 ## Troubleshooting
 
