@@ -8,11 +8,11 @@
 
 ## Project Description
 
-This project focuses on the construction of custom Model Context Protocol (MCP) servers built using Python code. The project was inspired by Dave Ebbelaar's [MCP Crash Course for Python Developers](https://www.youtube.com/watch?v=5xqFjh56AwM). The project breaks away from the use of Personal MCP servers that rely on Claude Desktop, Cursor, or other personal AI assistants. Instead, the project shows how to build MCP into Python Applications and agent systems. My project produces similar outputs to the the _MCP Crash Course for Python Developers_ course, but differs in the construction of the MCP tools and especially in the use of Gemini AI for models versus OpenAI which is used in the _Course_. The implementations of Gemini AI models require differences in MCP protocol implementation, but for the most part the overall flow of events follow the same general methodologies as outlined by the MCP standard.
+This project focuses on the construction of custom Model Context Protocol (MCP) servers built using Python code. The project was inspired by Dave Ebbelaar's [MCP Crash Course for Python Developers](https://www.youtube.com/watch?v=5xqFjh56AwM). The project breaks away from the use of Personal MCP servers that rely on Claude Desktop, Cursor, or other personal AI assistants. Instead, the project shows how to build MCP into Python Applications and agent systems. My project produces similar outputs to the MCP Crash Course for Python Developers_ course, but differs in the construction of the MCP tools and especially in the use of Gemini AI for models versus OpenAI which is used in the _Course_. The implementations of Gemini AI models require differences in MCP protocol implementation, but for the most part the overall flow of events follow the same general methodologies as outlined by the MCP standard.
 
 This project is important because it provides an understanding of how to build production systems that could use MCP in Python based applications.
 
-Also, the project was simply a good way to learning more about this vastly popular standardization protocol.
+Also, the project was simply a good way to learn more about this vastly popular standardization protocol.
 
 #### The Project's Key Components:
 
